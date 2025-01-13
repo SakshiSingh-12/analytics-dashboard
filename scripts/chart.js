@@ -1,8 +1,8 @@
 function createPieChart(data) {
     const ctx = document.getElementById('pie-chart').getContext('2d');
  
-    const labels = [...new Set(data.map(item => item.make))]; // Unique vehicle makes
-    const counts = labels.map(label => data.filter(item => item.make === label).length); // Count occurrences
+    const labels = [...new Set(data.map(item => item.make))];
+    const counts = labels.map(label => data.filter(item => item.make === label).length);
  
     new Chart(ctx, {
        type: 'pie',
@@ -48,8 +48,8 @@ function createPieChart(data) {
  function createBarChart(data) {
     const ctx = document.getElementById('bar-chart').getContext('2d');
     
-    const labels = [...new Set(data.map(item => item.make))]; // Unique vehicle makes
-    const counts = labels.map(label => data.filter(item => item.make === label).length); // Count occurrences
+    const labels = [...new Set(data.map(item => item.make))];
+    const counts = labels.map(label => data.filter(item => item.make === label).length);
  
     new Chart(ctx, {
        type: 'bar',

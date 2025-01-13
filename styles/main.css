@@ -82,26 +82,26 @@ section h2{
 }
 
 .content-section {
-    display: none; /* Hide all sections by default */
+    display: none;
 }
 
 .content-section.active {
-    display: block; /* Show active section */
+    display: block;
 }
 
 .charts {
-    display: flex; /* Flexbox for alignment */
+    display: flex;
 }
 
 .pie-chart-container {
-    width: 38%; /* Width for pie chart */
-    margin: 3%; /* Space between charts */
+    width: 38%;
+    margin: 3%;
     background-color: #313348;
     padding: 2%;
 }
 
 .bar-chart-container {
-    width: 40%; /* Width for bar graph */
+    width: 40%;
     margin: 3%;
     background-color: #313348;
     padding: 2%;

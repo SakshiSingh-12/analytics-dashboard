@@ -55,32 +55,26 @@
 
             <section id="trends" class="content-section">
                 <h2>Trends</h2>
-                <!-- Placeholder for additional trends charts or data -->
                 <p>This section will display trends related to EVs.</p>
             </section>
 
             <section id="statistics" class="content-section">
                 <h2>Statistics</h2>
 
-                <!-- Filter Options -->
                 <div class="filters mb-3">
                     <select id="year-filter" class="filters-1" onchange="filterTable()">
                         <option value="">Select Year</option>
-                        <!-- Populate years dynamically -->
                     </select>
 
                     <select id="make-filter" class="filters-1" onchange="filterTable()">
                         <option value="">Select Make</option>
-                        <!-- Populate makes dynamically -->
                     </select>
 
                     <select id="county-filter" class="filters-1" onchange="filterTable()">
                         <option value="">Select County</option>
-                        <!-- Populate counties dynamically -->
                     </select>
                 </div>
 
-                <!-- Statistics table -->
                 <table id="statistics-table">
                     <thead>
                         <tr><th>VIN</th><th>County</th><th>Make</th><th>Model Year</th></tr>
@@ -95,14 +89,11 @@
             <p>&copy; 2025 MapUp Dashboard</p>
         </footer>
 
-        <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="scripts/chart.js"></script>
         <script src="scripts/main.js"></script>
     </div>
 
-    <!-- Filter Functions -->
     <script src="//code.jquery.com/jquery-3.6.0.min.js"></script> 
-    <!-- Include jQuery for easier DOM manipulation if needed -->
 </body>
 </html>
