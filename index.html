@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Vehicle Population Dashboard</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <aside class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
+        <div class="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
+            <h5 class="fs-6 mb-0">Dashboard</h5>
+        </div>
+        <ul class="categories list-unstyled">
+            <li><a href="#" onclick="showSection('home')"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#" onclick="showSection('overview')"><i class="fas fa-info-circle"></i> Overview</a></li>
+            <li><a href="#" onclick="showSection('trends')"><i class="fas fa-chart-line"></i> Trends</a></li>
+            <li><a href="#" onclick="showSection('statistics')"><i class="fas fa-table"></i> Statistics</a></li>
+        </ul>
+    </aside>
+
+    <div id="wrapper">
+        <header>
+            <h1>Electric Vehicle Population Dashboard</h1>
+            <p>Visualizing key insights from the EV dataset.</p>
+        </header>
+
+        <main>
+            <section id="home" class="content-section active">
+                <h2>Home</h2>
+                <div class="charts">
+                    <div class="chart-container pie-chart-container">
+                        <canvas id="pie-chart"></canvas>
+                    </div>
+                    <div class="chart-container bar-chart-container">
+                        <canvas id="bar-chart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="overview" class="content-section">
+                <h2>Overview</h2>
+                <div id="key-metrics">
+                    <div class="metric">
+                        <h3>Total EVs</h3>
+                        <p id="total-evs">0</p>
+                    </div>
+                    <div class="metric metric-2">
+                        <h3>Top Make</h3>
+                        <p id="top-make">N/A</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="trends" class="content-section">
+                <h2>Trends</h2>
+                <!-- Placeholder for additional trends charts or data -->
+                <p>This section will display trends related to EVs.</p>
+            </section>
+
+            <section id="statistics" class="content-section">
+                <h2>Statistics</h2>
+
+                <!-- Filter Options -->
+                <div class="filters mb-3">
+                    <select id="year-filter" class="filters-1" onchange="filterTable()">
+                        <option value="">Select Year</option>
+                        <!-- Populate years dynamically -->
+                    </select>
+
+                    <select id="make-filter" class="filters-1" onchange="filterTable()">
+                        <option value="">Select Make</option>
+                        <!-- Populate makes dynamically -->
+                    </select>
+
+                    <select id="county-filter" class="filters-1" onchange="filterTable()">
+                        <option value="">Select County</option>
+                        <!-- Populate counties dynamically -->
+                    </select>
+                </div>
+
+                <!-- Statistics table -->
+                <table id="statistics-table">
+                    <thead>
+                        <tr><th>VIN</th><th>County</th><th>Make</th><th>Model Year</th></tr>
+                    </thead>
+                    <tbody id="statistics-body"></tbody>
+                </table>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2025 MapUp Dashboard</p>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="scripts/chart.js"></script>
+        <script src="scripts/main.js"></script>
+    </div>
+
+    <!-- Filter Functions -->
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <!-- Include jQuery for easier DOM manipulation if needed -->
+</body>
+</html>
