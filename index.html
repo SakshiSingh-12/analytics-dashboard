@@ -46,7 +46,7 @@
                         <h3>Total EVs</h3>
                         <p id="total-evs">0</p>
                     </div>
-                    <div class="metric metric-2">
+                    <div class="metric">
                         <h3>Top Make</h3>
                         <p id="top-make">N/A</p>
                     </div>
@@ -64,23 +64,23 @@
 
                 <!-- Filter Options -->
                 <div class="filters mb-3">
-                    <select id="year-filter" class="filters-1" onchange="filterTable()">
+                    <select id="year-filter" onchange="filterTable()">
                         <option value="">Select Year</option>
                         <!-- Populate years dynamically -->
                     </select>
 
-                    <select id="make-filter" class="filters-1 onchange="filterTable()">
+                    <select id="make-filter" onchange="filterTable()">
                         <option value="">Select Make</option>
                         <!-- Populate makes dynamically -->
                     </select>
 
-                    <select id="county-filter" class="filters-1 onchange="filterTable()">
+                    <select id="county-filter" onchange="filterTable()">
                         <option value="">Select County</option>
                         <!-- Populate counties dynamically -->
                     </select>
 
                     <!-- Clear Filters Button -->
-                    <button class="filters-1 onclick="clearFilters()">Clear Filters</button>
+                    <button onclick="clearFilters()">Clear Filters</button>
                 </div>
 
                 <!-- Statistics table -->
